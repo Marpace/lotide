@@ -17,8 +17,8 @@ function middle(arr) {
   let newArr = [];
   if (arr.length < 3) return newArr;
   
-  if (arr.length % 2 === 0) newArr.push(arr[arr.length / 2] - 1, arr[(arr.length / 2)]);
-  else newArr.push(Math.floor(arr.length / 2) + 1);
+  if (arr.length % 2 === 0) newArr.push(arr[(arr.length / 2) - 1], arr[(arr.length / 2)]);
+  else newArr.push(arr[Math.floor(arr.length / 2) + 1]);
   return newArr;
 }
 
