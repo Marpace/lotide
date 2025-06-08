@@ -17,7 +17,9 @@ const eqObjects = (obj1, obj2) => {
   if(Object.keys(obj1).length !== Object.keys(obj2).length) return false;
 
   for(const key in obj1) {
-    console.log(eqArrays(obj1[key], obj2[key]))
+    if(typeof obj1[key] === 'object' && typeof obj2[key] === 'object') {
+      eqObjects(obj1[key], obj2[key]);
+    }
     if(Array.isArray(obj1[key]) && !eqArrays(obj1[key], obj2[key])) return false;
     if(!Array.isArray(obj1[key]) && obj1[key] !== obj2[key]) return false;
   }
@@ -37,3 +39,6 @@ const longSleeveMultiColorShirtObject = {
 
 assertEqual(eqObjects(multiColorShirtObject, anotherMultiColorShirtObject), true)
 assertEqual(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject), false)
+assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), true) // => true
+assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), false) // => false
+assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }), false) // => false

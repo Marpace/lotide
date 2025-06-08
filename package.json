@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@palmonacid/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "Utilities library",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/Marpace/lotide.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Pablo Almonacid",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Marpace/lotide/issues"
