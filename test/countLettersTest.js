@@ -1,10 +1,11 @@
 const assert = require("chai").assert;
 const countLetters = require("../countLetters");
 
-const result1 = countLetters("Hello World"); 
 
 
-describe("#countLetters", () => { 
+describe("#countLetters", () => {
+  
+  const result1 = countLetters("Hello World");
 
   it("Returns 3 for countLetters('Hello World')['l']", () => {
     assert.strictEqual(result1["l"], 3);
@@ -22,4 +23,4 @@ describe("#countLetters", () => {
     assert.strictEqual(result1["x"], undefined);
   });
 
-})
+});

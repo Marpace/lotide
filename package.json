@@ -2,12 +2,12 @@
   "name": "@palmonacid/lotide",
   "version": "1.0.0",
   "description": "Utilities library",
-  "main": "assertArraysEqual.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha" 
   },
   "repository": {
     "type": "git",

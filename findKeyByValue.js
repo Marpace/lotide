@@ -1,10 +1,9 @@
-
 const findKeyByValue = (obj, el) => {
-  for(const key in obj) {
-    if(obj[key] === el) return key;
+  for (const key in obj) {
+    if (obj[key] === el) return key;
   }
-  return undefined; 
-}
+  return undefined;
+};
 
 module.exports = findKeyByValue;
 
